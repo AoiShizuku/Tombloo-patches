@@ -38,6 +38,12 @@
     ps = proceed(args);
     ps.itemUrl = ps.itemUrl.replace('.L.LZZZZZZZ.', '.L.');
 
+// HTML をお手軽にコピー
+template = ['<a href="', ctx.href, '"><img alt="photo" src="',
+ps.itemUrl.replace('.LZZZZZZZ.', '._SL160_.'),
+'" /></a>'].join('');
+copyString(template);
+
     // add @asiamoth
     template = ['<div class="xfolkentry shopping">',
                 '<p><a class="taggedlink" href="', ctx.href, '">',
